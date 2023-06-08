@@ -565,3 +565,8 @@ footer .holder .person .social-media a i {
 footer .holder .person .social-media a i:hover {
   color: #4c00b0;
 }
+
+.favico{
+  width: 32px;
+  height: 32px;
+}
