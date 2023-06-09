@@ -157,7 +157,10 @@ header .container {
     padding: 5px 10px;
     flex-direction: column;
   }
-
+  .cursor,
+  .cursor2 {
+    visibility: hidden;
+  }
 }
 
 header .container img {
@@ -551,9 +554,7 @@ footer .holder .person .social-media a i:hover {
   color: #4c00b0;
 }
 
-@media only screen and (max-device-width:767px){
-  
-  .cursor, .cursor2{
-    visibility: hidden;
-  }
+.favico {
+  width: 32px;
+  height: 32px;
 }
