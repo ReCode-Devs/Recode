@@ -1,8 +1,5 @@
 // Update header position on scroll
 window.addEventListener("scroll", function () {
-  const header = document.querySelector("header");
-  header.style.top = window.scrollY + 25 + "px";
-
   const links = document.querySelectorAll("nav a");
   const currentScroll = window.pageYOffset;
 

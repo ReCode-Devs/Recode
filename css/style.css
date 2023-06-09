@@ -140,6 +140,10 @@ header .container {
   background-color: #fff;
   box-shadow: -2px 4px 13px 0px #b1b1b1;
   border-radius: 100px;
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media (max-width: 992px) {
@@ -153,6 +157,7 @@ header .container {
     padding: 5px 10px;
     flex-direction: column;
   }
+
 }
 
 header .container img {
@@ -223,26 +228,7 @@ header .container nav ul li:hover {
   align-items: center;
   height: 100vh;
   cursor: none;
-
   position: relative;
-}
-
-@media (min-width: 992px) {
-  .landing-page {
-    height: calc(100vh - 60.68px);
-  }
-}
-
-@media (max-width: 991.99px) {
-  .landing-page {
-    height: calc(100vh - 47.97px);
-  }
-}
-
-@media (max-width: 767.99px) {
-  .landing-page {
-    height: calc(100vh - 62.97px);
-  }
 }
 
 .landing-page .container .text-container {
@@ -565,7 +551,9 @@ footer .holder .person .social-media a i:hover {
   color: #4c00b0;
 }
 
-.favico{
-  width: 32px;
-  height: 32px;
+@media only screen and (max-device-width:767px){
+  
+  .cursor, .cursor2{
+    visibility: hidden;
+  }
 }
