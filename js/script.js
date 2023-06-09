@@ -1,8 +1,28 @@
+// Update header position on scroll
+window.addEventListener("scroll", function () {
+  const links = document.querySelectorAll("nav a");
+  const currentScroll = window.pageYOffset;
+
+  document.querySelectorAll("section").forEach((section) => {
+    const sectionTop = section.offsetTop - 200;
+
+    if (currentScroll >= sectionTop) {
+      const sectionId = section.getAttribute("id");
+      for (let i = 0; i < links.length; i++) {
+        links[i].parentElement.classList.remove("active");
+        if (links[i].getAttribute("href") === `#${sectionId}`) {
+          links[i].parentElement.classList.add("active");
+        }
+      }
+    }
+  });
+
   if (currentScroll >= document.querySelector("footer").offsetTop - 250) {
     for (let i = 0; i < links.length; i++) {
       links[i].parentElement.classList.remove("active");
     }
   }
+});
 
 // Scroll to about-us section on button click
 const pageDownBtn = document.getElementById("page-down");
