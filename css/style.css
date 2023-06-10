@@ -142,6 +142,7 @@ header .container {
   border-radius: 100px;
   position: fixed;
   width: 100%;
+  top: 25px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -296,28 +297,35 @@ header .container nav ul li:hover {
   padding-bottom: var(--main-section-padding);
 }
 
-.about-us .container {
+.about-us .container .holder {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-us .container .holder > p {
+  font-size: 23px;
+  margin-bottom: 50px;
+}
+
+.about-us .container .holder .boxs {
   display: grid;
   grid-template-columns: repeat(auto-fill, 300px);
   grid-template-rows: 420px;
   justify-content: center;
   column-gap: 120px;
   row-gap: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @media (max-width: 991px) {
-  .about-us .container {
+  .about-us .container .holder .boxs {
     grid-template-rows: repeat(2, 420px);
   }
 }
 
-@media (max-width: 771px) {
-  .about-us .container {
-    grid-template-rows: repeat(3, 420px);
-  }
-}
-
-.about-us .container .box {
+.about-us .container .holder .boxs .box {
   display: flex;
   flex-direction: column;
   background-color: #320059;
@@ -328,7 +336,7 @@ header .container nav ul li:hover {
   position: relative;
 }
 
-.about-us .container .box .overlay {
+.about-us .container .holder .boxs .box .overlay {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -341,21 +349,21 @@ header .container nav ul li:hover {
   transition: opacity 0.3s ease;
 }
 
-.about-us .container .box:hover .overlay {
+.about-us .container .holder .boxs .box:hover .overlay {
   opacity: 0;
 }
 
-.about-us .container .box:hover {
+.about-us .container .holder .boxs .box:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
 
-.about-us .container .box:not(:hover) {
+.about-us .container .holder .boxs .box:not(:hover) {
   transform: scale(1);
   transition: transform 0.3s ease;
 }
 
-.about-us .container .box .langs {
+.about-us .container .holder .boxs .box .langs {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
@@ -364,9 +372,10 @@ header .container nav ul li:hover {
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  margin-top: 20px;
 }
 
-.about-us .container .box .langs span {
+.about-us .container .holder .boxs .box .langs span {
   padding: 3px;
   background-color: #fff;
   color: #320059;
@@ -374,15 +383,15 @@ header .container nav ul li:hover {
   border-radius: 20px;
 }
 
-.about-us .container .box .langs span:first-child {
+.about-us .container .holder .boxs .box .langs span:first-child {
   margin-top: 0;
 }
 
-.about-us .container .box h2 {
+.about-us .container .holder .boxs .box h2 {
   font-weight: bold;
 }
 
-.about-us .container .box p {
+.about-us .container .holder .boxs .box p {
   font-weight: 400;
   font-size: 14px;
 }
@@ -528,12 +537,9 @@ footer .holder .person {
   flex: 1;
 }
 
-footer .holder .person p {
+footer .holder .person h3 {
   font-size: 18px;
-}
-
-footer .holder .person p span {
-  font-weight: 600;
+  margin: 0;
 }
 
 footer .holder .person .social-media a {
@@ -552,9 +558,4 @@ footer .holder .person .social-media a i {
 
 footer .holder .person .social-media a i:hover {
   color: #4c00b0;
-}
-
-.favico {
-  width: 32px;
-  height: 32px;
 }
